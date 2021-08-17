@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControlaJogador : MonoBehaviour
 {
-    public float velocidade = 10;
+    public float velocidade = 15;
     
     // Update is called once per frame
     void Update()
