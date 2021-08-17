@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class ControlaJogador : MonoBehaviour
 {
-    public float velocidade = 15;
-    private Animator _animator;
-
-    // Update is called once per frame
-    private void Start()
-    {
-        _animator = GetComponent<Animator>();
-    }
+    public float velocidade = 20;
+  
 
     void Update()
     {
@@ -23,7 +17,8 @@ public class ControlaJogador : MonoBehaviour
         
         transform.Translate(direcao * (velocidade * Time.deltaTime));
 
-
-        _animator.SetBool("Movendo", direcao != Vector3.zero);
+        
+       GetComponent<Animator>().SetBool("Movendo", direcao != Vector3.zero);
+        
     }
 }
